@@ -65,7 +65,7 @@ do
                 }
             }
 
-            Console.WriteLine("Dato convertido a: "+ dato );
+            Console.WriteLine("Dato convertido a: "+ dato + "" + u1 );
         break;
         case 2:
             Console.WriteLine("Adios");

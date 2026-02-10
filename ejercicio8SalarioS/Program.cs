@@ -1,0 +1,25 @@
+﻿using ejercicio8SalarioS.Clases;
+NoNeg noNegativo = new NoNeg();
+CalculadoraSalario calcularSalario = new CalculadoraSalario();
+int horas, horasx;
+double tarifa, tarifaHx, salarioT, Salario, SalHx;
+Console.WriteLine("Calculadora de salarios");
+Console.WriteLine("Ingrese el valor de su tarifa por hora: ");
+tarifa = double.Parse(Console.ReadLine());
+tarifa = noNegativo.positivoDoubleCon(tarifa);
+Console.WriteLine("Ingrese las horas trabajadas: ");
+horas = int.Parse(Console.ReadLine());
+horas = noNegativo.positivoConverter(horas);
+Console.WriteLine("Ingrese el valor de tarifa de sus horas extras: ");
+tarifaHx = double.Parse(Console.ReadLine());
+tarifaHx = noNegativo.positivoDoubleCon(tarifaHx);
+Console.WriteLine("Ingrese las horas extras trabajadas: ");
+horasx = int.Parse(Console.ReadLine());
+horasx = noNegativo.positivoConverter(horasx);
+Salario =  calcularSalario.CalcularSalarioBase(tarifa, horas);
+SalHx = calcularSalario.CalcularHorasExtras(tarifaHx,horasx);
+Console.WriteLine("El salario base es de: " + Salario);
+Console.WriteLine("El total a pagar por horas extras es: " + SalHx);
+salarioT = Salario + SalHx;
+Console.WriteLine("El salario total es de: " + salarioT);
+
