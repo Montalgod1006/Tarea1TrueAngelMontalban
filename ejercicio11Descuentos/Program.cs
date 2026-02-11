@@ -1,0 +1,14 @@
+﻿using ejercicio11Descuentos.Clases;
+double totalPurchase, discount, total ;
+NoNeg nonegativo = new NoNeg();
+DescuentosCalculator CalcularDescuento = new DescuentosCalculator();
+Console.Clear();
+Console.WriteLine("CALCULADORA DE DESCUENTOS");
+Console.WriteLine("Ingrese el total de la compra: ");
+totalPurchase = double.Parse(Console.ReadLine());
+totalPurchase = nonegativo.positivoDoubleCon(totalPurchase);
+discount = CalcularDescuento.CalcularDescuento(totalPurchase);
+total = totalPurchase - discount;
+Console.WriteLine("Precio original: " + totalPurchase);
+Console.WriteLine("Descuento: " + discount);
+Console.WriteLine("total a pagar: " + total);
