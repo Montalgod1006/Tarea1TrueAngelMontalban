@@ -1,0 +1,16 @@
+﻿using ejercicio13ValidarFecha.Clases;
+ValidarDatos DatosV = new ValidarDatos();
+ValidadorFecha ValFecha = new ValidadorFecha();
+Console.Clear();
+int año, mes, dia;
+Console.WriteLine("Validador Fecha");
+Console.WriteLine("Ingrese año: ");
+año = int.Parse(Console.ReadLine());
+año = DatosV.validadorPositivos(año);
+Console.WriteLine("Ingrese Mes(1-12): ");
+mes = int.Parse(Console.ReadLine());
+mes = DatosV.validadorMes(mes);
+Console.WriteLine("Ingrese dia(1-31): ");
+dia = int.Parse(Console.ReadLine());
+dia = DatosV.validadorDia(dia);
+ValFecha.ValidadorDeFecha(año, mes, dia);
