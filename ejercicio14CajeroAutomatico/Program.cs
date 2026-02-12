@@ -21,11 +21,11 @@ do
             saldo = calcularRetiros.SimularRetiro(retiro,saldo);
         break;
         case 2:
-
+                Console.WriteLine("Adios");
         break;
 
         default:
-
+                Console.WriteLine("Opción invalida");
         break;
     }
 } while (op!=2);
